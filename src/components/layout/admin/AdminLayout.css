@@ -1,0 +1,12 @@
+.admin-aside{
+  height: 100vh;
+  padding-top: 20px;
+  z-index: 999;
+}
+
+.admin-main{
+  height: calc(100vh - 112px);
+  overflow: auto;
+}
+
+
