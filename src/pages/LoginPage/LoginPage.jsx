@@ -2,12 +2,14 @@
 import Cookies from "js-cookie"
 import request from "../../server"
 import "./Login.scss"
-import { setAuth } from "../../redux/slices/auth"
+import { authName, setAuth } from "../../redux/slices/auth"
 
 import { useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 const LoginPage = () => {
+
+  const { role} = useSelector(state=>state[authName])
 
   const dispatch = useDispatch()
 
@@ -22,7 +24,11 @@ const LoginPage = () => {
       }
       const {data} = await request.post("auth/login" , values)
       dispatch(setAuth(data.user.role))
-      navigate("/skills")
+      if (role === "admin") {
+        navigate("/dashboard")
+      } else{
+        navigate("/")
+      }
       Cookies.set("Login" , data.token)
       Cookies.set("Role" , data.user.role)
     } catch (err) {

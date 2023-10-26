@@ -27,6 +27,7 @@ const AdminLayout = () => {
   } = theme.useToken();
 
 
+
   const logout = ()=>{
     const LogoutConfirm = confirm("Akkountdan chiqichni xohlaysizmi?")
 
@@ -66,6 +67,15 @@ const AdminLayout = () => {
               label: <NavLink to="/skills">Skills</NavLink>,
             },
             {
+              key: '/experiences',
+              icon: <VideoCameraOutlined />,
+              label: <NavLink to="/experiences">Experiences</NavLink>,
+            },{
+              key: '/portfolios',
+              icon: <VideoCameraOutlined />,
+              label: <NavLink to="/portfolios">Education</NavLink>,
+            },
+            {
               icon: <UploadOutlined />,
               label: <button onClick={logout} style={{
                 border:"none",
@@ -98,11 +108,11 @@ const AdminLayout = () => {
         </Header>
         <Content
           style={{
-            margin: '24px 16px',
             padding: 24,
             minHeight: 280,
             background: colorBgContainer,
           }}
+          className='admin-main'
         >
           <Outlet/>
         </Content>

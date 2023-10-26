@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+import { authName } from "../../../redux/slices/auth";
 import "./Layout.scss"
 
 import { NavLink } from "react-router-dom";
@@ -5,6 +7,9 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
 
+  const {isAuth , role} = useSelector(state=>state[authName])
+
+  console.log(role);
 
   return (
     <header className="header">
@@ -12,6 +17,9 @@ const Header = () => {
         <nav>
           <div className="header-left">
             <NavLink to="">Home</NavLink>
+            {
+              isAuth && role === "admin" ? <><a> || </a> <NavLink to="Dashboard">Dashboard</NavLink></> : ""
+            }
           </div>
           <div className="header-right">
             <NavLink to="register">Register</NavLink>

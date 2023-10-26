@@ -9,6 +9,8 @@ import SkillsPage from "./pages/SkillsPage/SkillsPage"
 import { useSelector } from "react-redux"
 import { authName } from "./redux/slices/auth"
 import DashboardPage from "./pages/DashboardPage/DashboardPage"
+import PortFoliosPage from "./pages/PortfoliosPage/PortFoliosPage"
+import ExperiencesPage from "./pages/ExperiencesPage/ExperiencesPage"
 
 
 function App() {
@@ -27,7 +29,8 @@ function App() {
           isAuth  ? <Route element={<AdminLayout />}>
             <Route path="/skills" element={<SkillsPage/>} />
             <Route path="/dashboard" element={<DashboardPage/>} />
-
+            <Route path="/portfolios" element={<PortFoliosPage/>} />
+            <Route path="/experiences" element={<ExperiencesPage/>} />
           </Route>:<></>
         }
       </Routes>

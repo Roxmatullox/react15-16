@@ -5,7 +5,7 @@ const authName = "auth"
 
 const initialState = {
   isAuth : Boolean(Cookies.get("Login")) ,
-  role : Boolean(Cookies.get("role")),
+  role : Cookies.get("Role")
 }
 
 const authSlice = createSlice({
