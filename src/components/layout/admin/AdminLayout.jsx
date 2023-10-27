@@ -73,7 +73,7 @@ const AdminLayout = () => {
             },{
               key: '/portfolios',
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/portfolios">Education</NavLink>,
+              label: <NavLink to="/portfolios">Portfolios</NavLink>,
             },
             {
               icon: <UploadOutlined />,
