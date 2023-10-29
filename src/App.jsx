@@ -11,6 +11,7 @@ import { authName } from "./redux/slices/auth"
 import DashboardPage from "./pages/DashboardPage/DashboardPage"
 import PortFoliosPage from "./pages/PortfoliosPage/PortFoliosPage"
 import ExperiencesPage from "./pages/ExperiencesPage/ExperiencesPage"
+import AllUsersPage from "./pages/AllUsersPage/AllUsersPage"
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/skills" element={<SkillsPage/>} />
             <Route path="/dashboard" element={<DashboardPage/>} />
             <Route path="/portfolios" element={<PortFoliosPage/>} />
+            <Route path="/users" element={<AllUsersPage/>} />
             <Route path="/experiences" element={<ExperiencesPage/>} />
           </Route>:<></>
         }

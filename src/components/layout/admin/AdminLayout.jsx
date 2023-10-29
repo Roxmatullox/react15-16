@@ -76,6 +76,11 @@ const AdminLayout = () => {
               label: <NavLink to="/portfolios">Portfolios</NavLink>,
             },
             {
+              key: '/users',
+              icon: <VideoCameraOutlined />,
+              label: <NavLink to="/users">Users</NavLink>,
+            },
+            {
               icon: <UploadOutlined />,
               label: <button onClick={logout} style={{
                 border:"none",

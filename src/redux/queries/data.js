@@ -55,6 +55,13 @@ const dataQuery = createApi({
         method : "GET",
         url,
       } )
+    }),
+    updateUser : builder.mutation({
+      query : ({url , values})=>({
+        method : "PUT",
+        url,
+        body : values
+      })
     })
   })
 })
@@ -66,4 +73,4 @@ export default dataQuery
 
 export { dataQueryName , dataQueryReducer }
 
-export const { useGetDataQuery , useUploadPhotoMutation , useAddDataMutation , useGetOneMutation , useUpdateDataMutation , useDeleteDataMutation } = dataQuery
+export const {useGetDataQuery , useUploadPhotoMutation , useAddDataMutation , useGetOneMutation , useUpdateDataMutation , useDeleteDataMutation , useUpdateUserMutation } = dataQuery
