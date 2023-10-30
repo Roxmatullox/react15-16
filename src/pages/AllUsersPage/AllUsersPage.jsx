@@ -188,7 +188,7 @@ const AllUsersPage = () => {
                       rules={[
                         {
                           required: true,
-                          message: 'Please inpu workname name!',
+                          message: 'Please input workname name!',
                         },
                       ]}
                     >
