@@ -134,13 +134,13 @@ const AllUsersPage = () => {
         <div className="container">
           <div className="search-container">
             <input onChange={SerachSkills} type="text" placeholder="Search..." />
-            <button className="modal-open" onClick={showModal}>Create experience</button>
+            <button className="modal-open" onClick={showModal}>Create user</button>
           </div>
         </div>
       </section>            
       <Table loading={isFetching} className="table"  title={()=>(
         <Flex justify="space-between" align="center">
-          <h2>users ({total})</h2>
+          <h2>Users ({total})</h2>
         </Flex>
       )} pagination={false} dataSource={porfolios} columns={columns} />
       {
