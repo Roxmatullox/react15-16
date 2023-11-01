@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-section">
           <div className="footer-left">
-            <a href="">Finstreet 118 2561 Fintown</a>
-            <a href="">Hello@finsweet.com  020 7993 2905</a>
+            <a href="">Bu sayt <a href="https://t.me/Prime_hitler">Rohmatulloh</a> tomonidan tayyorlandi !</a>
+            <a href=""><a href="https://t.me/Prime_hitler">Telegram orqali boglaning!</a></a>
           </div>
           <div className="footer-right">
             

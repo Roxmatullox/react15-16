@@ -10,7 +10,7 @@ import { Layout, Menu, Button, theme } from 'antd';
 const { Header, Sider, Content } = Layout;
 
 import "./AdminLayout.css"
-import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeAuth } from '../../../redux/slices/auth';
 import Cookies from 'js-cookie';
@@ -20,6 +20,7 @@ const AdminLayout = () => {
   const dispatch = useDispatch()
 
   const navigate = useNavigate()
+
 
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -81,13 +82,13 @@ const AdminLayout = () => {
               label: <NavLink to="/users">Users</NavLink>,
             },
             {
-              icon: <UploadOutlined />,
-              label: <button onClick={logout} style={{
-                border:"none",
-                borderRadius:"5px",
-                backgroundColor:"red",
-                color:"white",
-              }}>Logout</button>,
+              icon: <UploadOutlined/>,
+              label: <a style={{
+                height:"100%",
+                display:"flex",
+                alignItems:"center",
+                color:"red",
+              }} onClick={logout}>Logout</a>,
             },
           ]}
           
@@ -96,8 +97,11 @@ const AdminLayout = () => {
       <Layout>
         <Header
           style={{
+            width:"100%",
             padding: 0,
             background: colorBgContainer,
+            display:"flex",
+            justifyContent:"space-between",
           }}
         >
           <Button
@@ -110,6 +114,12 @@ const AdminLayout = () => {
               height: 64,
             }}
           />
+          <div style={{
+            paddingRight:"40px"
+          }}>
+            <Link to="/messages">Messages  / </Link>
+            <Link to="/account">Account {`->`}</Link>
+          </div>
         </Header>
         <Content
           style={{

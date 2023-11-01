@@ -18,12 +18,14 @@ const Header = () => {
           <div className="header-left">
             <NavLink to="">Home</NavLink>
             {
-              isAuth && role === "admin" ? <><a> || </a> <NavLink to="Dashboard">Dashboard</NavLink></> : ""
+              isAuth && role === "admin" ? <><a> || </a> <NavLink to="dashboard">Dashboard</NavLink></> : ""
             }
           </div>
           <div className="header-right">
             <NavLink to="register">Register</NavLink>
-            <NavLink to="login">Login</NavLink>
+            {
+              isAuth ? <NavLink to="/account">Account {`->`}</NavLink> : <NavLink to="login">Login</NavLink>
+            }
           </div>
         </nav>
       </div>

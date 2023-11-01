@@ -1,0 +1,50 @@
+.dashboard-page{
+  height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  a{
+    color: transparent;
+
+    &:hover{
+      color: transparent;
+    }
+  }
+
+  >div{
+    background-color: teal;
+    border-radius: 20px;
+    padding: 20px;
+
+    h2{
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p{
+      color: white;
+    }
+
+    h4{
+      color: white;
+      text-align: right;
+    }
+  }
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

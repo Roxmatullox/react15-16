@@ -1,0 +1,60 @@
+
+.home{
+  min-height: calc(100vh - 116px);
+  padding-top: 100px;
+  background-color:cadetblue;
+}
+
+.home-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media(max-width:1250px){
+    &{
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+    }
+  }
+
+  img{
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+
+  .home-text{
+    padding: 20px;
+
+    h1{
+      color: antiquewhite;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    p{
+      color:darkslategrey;
+      font-size: 18px;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
+
+
+header .active{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.messages{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  >div{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
